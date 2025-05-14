@@ -1,0 +1,717 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fruktur:ital@0;1&display=swap');
+
+:root {
+    --primary: #2B2D42;
+    --secondary: #8D99AE;
+    --accentP: #F0BD24;
+    --accentS: #D98704;
+    --white: #EDF2F4;
+}
+* {
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+body {
+    width: 100vw; min-height: 100vh;
+    width: 100dvw; min-height: 100dvh;
+    padding: 1em 3em;
+    background-color: var(--primary);
+    display: flex; flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+}
+/* ======================== */
+
+
+
+/* ======================== */
+nav {
+    width: 100vw; height: 5em;
+    padding-inline: 3em;
+    display: flex; flex-direction: row;
+    position: fixed;
+    top: 0;
+    backdrop-filter: blur(0.5em);
+    backdrop-filter: blur(1em) saturate(100%);
+    background-color: #1119284d;
+    border-bottom: 1px solid #ffffff20;
+    z-index: 100;
+}
+nav .nav-l {
+    width: 50%; height: 100%;
+    display: flex; flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 0.5em;
+}
+nav .nav-l img {
+    width: 3em;
+}
+nav .nav-l p {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--white);
+}
+nav .nav-r {
+    width: 50%; height: 100%;
+    display: flex; flex-direction: row;
+    align-items: center;
+    justify-content: end;
+}
+nav .nav-r a {
+    padding: 1em 2em;
+    font-size: 1em;
+    font-weight: 500;
+    display: flex; flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    border: 2px solid var(--accentP);
+    border-radius: 0.5em;
+    color: var(--accentP);
+    transition: all 0.3s ease-in-out
+}
+nav .nav-r a i {
+    font-size: 1.2em;
+}
+nav .nav-r a:hover {
+    background-color: var(--accentP);
+    color: var(--primary);
+    box-shadow: 0 0 5px 1px var(--accentS);
+}
+/* ======================== */
+
+
+
+/* ======================== */
+.intro {
+    width: 100%; height: 95vh;
+    margin-top: 4em;
+    display: flex; flex-direction: row;
+}
+.intro .int-l {
+    width: 50%; height: 100%;
+    display: flex; flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 2em;
+}
+.intro .int-l h1 {
+    font-size: 4.5em;
+    font-family: "Kanit";
+    font-style: italic;
+    line-height: 1;
+    color: var(--white);
+}
+.intro .int-l h1 span img {
+    width: 0.85em;
+    rotate: 7deg;
+    translate: -.3rem 1rem;
+    border-radius: 0.25rem;
+    filter: drop-shadow(.1rem .1rem 3px #00000066);
+}
+.intro .int-l h1 .word {
+    font-style: normal;
+    color: var(--accentP);
+}
+.intro .int-l .slogan {
+    color: var(--secondary);
+    font-style: italic;
+    font-weight: 500;
+    padding: 0.5em;
+    border-block: 1px solid var(--white);
+}
+.intro .int-l a {
+    padding: 1em 2em;
+    font-size: 1em;
+    font-weight: 500;
+    border: 2px solid var(--accentP);
+    border-radius: 0.5em;
+    color: var(--accentP);
+    transition: all 0.3s ease-in-out
+}
+.intro .int-l a:hover {
+    background-color: var(--accentP);
+    color: var(--primary);
+    box-shadow: 0 0 5px 1px var(--accentS);
+}
+.intro .int-l .points {
+    width: 50%; height: 4em;
+    display: flex; flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.intro .int-l .points .items {
+    display: flex; flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+}
+.intro .int-l .points .items i {
+    padding: 0.5em;
+    border-radius: 0.25em;
+    background-color: var(--accentP);
+    color: var(--primary);
+}
+.intro .int-l .points .items p {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: var(--white);
+}
+.intro .int-r {
+    width: 50%; height: 100%;
+    display: grid; place-items: center;
+}
+.intro .int-r .r-holder {
+    width: 70%; height: 90%;
+    background-image: url("../files/logoB.png");
+    background-size: cover;
+    background-position: center;
+    display: grid; place-items: center;
+}
+.intro .int-r .r-holder h2 {
+    font-size: 2.5em;
+    color: var(--white);
+    font-family: "Kanit";
+    letter-spacing: 0.1em;
+}
+.intro .int-r .r-holder h2 span:nth-child(1) {
+    color: var(--secondary);
+}
+.intro .int-r .r-holder h2 span:nth-child(2) {
+    color: var(--accentP);
+}
+/* ======================== */
+
+
+
+/* ======================== */
+main {
+    width: 100%; height: 100vh;
+    display: flex; flex-direction: column;
+    justify-content: space-between;
+}
+main .slider {
+    width: 100%; height: var(--height);
+    mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+    overflow: hidden;
+}
+main .slider .list {
+    width: 100%;
+    min-width: calc(var(--width) * var(--number));
+    display: flex; flex-direction: row;
+    position: relative;
+}
+main .slider .list .items {
+    width: var(--width); height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: slide 10s linear infinite;
+    animation-delay: calc((10s / var(--number)) * (var(--position) - 1));
+}
+main .slider .list .items img {
+    width: 100%;
+    filter: saturate(33%);
+}
+.trend {
+    width: 100%; height: 80%;
+    display: flex; flex-direction: row;
+}
+.trend .tr-l {
+    width: 50%; height: 100%;
+    display: grid; place-items: center;
+}
+.trend .tr-l .card {
+    width: 60%; height: 85%;
+    display: flex; flex-direction: column;
+}
+.trend .tr-l .card .card-main {
+    width: 100%; height: 80%;
+    display: grid; place-items: center;
+}
+.trend .tr-l .card .card-main img {
+    width: 25em;
+    border-radius: 1em;
+    filter: drop-shadow(.1rem .1rem 3px #00000066);
+}
+.trend .tr-l .card .card-footer {
+    width: 100%; height: 20%;
+    display: flex; flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+.trend .tr-l .card .card-footer img {
+    width: 7em;
+    border-radius: 0.5em;
+    filter: drop-shadow(0.1rem 0.1rem 3px #00000066);
+}
+.trend .tr-l .card .card-footer span {
+    position: absolute;
+    font-family: "Fruktur";
+    font-style: italic;
+    font-size: 1.5em;
+}
+.trend .tr-l .card .card-footer span:nth-child(4) {
+    font-size: 3em;
+    bottom: 3.2em;
+    rotate: -9deg;
+    color: #ee0000;
+    text-shadow: 0.05em 0.1em 0.1em #00000066;
+}
+.trend .tr-l .card .card-footer span:nth-child(5) {
+    font-size: 1.5em;
+    bottom: 0.2em; left: 0.9em;
+    rotate: -9deg;
+    color: #ee7300;
+    text-shadow: 0.05em 0.1em 0.1em #00000066;
+}
+.trend .tr-l .card .card-footer span:nth-child(6) {
+    font-size: 1.5em;
+    bottom: 0.2em; left: 9.3em;
+    rotate: -9deg;
+    color: #0067ee;
+    text-shadow: 0.05em 0.1em 0.1em #00000066;
+}
+.trend .tr-l .card .card-footer span:nth-child(7) {
+    font-size: 1.5em;
+    bottom: 0.2em; right: 1.7em;
+    rotate: -9deg;
+    color: #a300ee;
+    text-shadow: 0.05em 0.1em 0.1em #00000066;
+}
+.trend .tr-l .card .card-footer p {
+    padding: 0.5em 1em;
+    border-radius: 0.25em;
+    position: absolute;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--white);
+    backdrop-filter: blur(8px) saturate(99%);
+    background-color: #8D99AE33;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+.trend .tr-l .card .card-footer p:nth-child(8) {
+    bottom: 17em; left: -1em;
+    font-size: 2em;
+}
+.trend .tr-l .card .card-footer p:nth-child(9) {
+    bottom: 15em; right: 2em;
+    font-size: 1em;
+}
+.trend .tr-l .card .card-footer p:nth-child(10) {
+    bottom: 9.5em; left: 4.5em;
+    font-size: 1.2em;
+    font-style: normal;
+    font-weight: 800;
+    color: var(--accentP);
+    background-color: #2B2D4266;
+}
+.trend .tr-r {
+    width: 50%; height: 100%;
+    display: grid; place-items: center;
+}
+.trend .tr-r .desc-holder {
+    width: 70%; height: 80%;
+    display: flex; flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: var(--secondary);
+}
+.trend .tr-r .desc-holder p:nth-child(1) {
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-style: italic;
+}
+.trend .tr-r .desc-holder p:nth-child(2) {
+    font-size: 5.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.trend .tr-r .desc-holder p:nth-child(3) {
+    font-size: 2rem;
+    font-family: "Fruktur";
+    color: var(--accentS);
+    text-shadow: 0 0 .1rem #00000066;
+    position: absolute;
+    bottom: 19rem;
+    rotate: -6deg;
+}
+.trend .tr-r .desc-holder .info {
+    width: 100%; height: 4rem;
+    display: flex; flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.trend .tr-r .desc-holder .info span {
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary);
+}
+.trend .tr-r .desc-holder .info span i {
+    color: var(--accentP);
+}
+/* ======================== */
+
+
+
+/* ======================== */
+footer {
+    width: 100%; height: 40vh;
+    margin-top: 5em;
+    display: flex; flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: default;
+}
+footer .cards {
+    width: 30%; height: 80%;
+    display: flex; flex-direction: column;
+}
+footer .cards .top {
+    width: 80%; height: 90%;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+footer .card1 .top {
+    background-image: url("../files/whatnft.png");
+    background-size: cover;
+    background-position: center;
+}
+footer .card2 .top {
+    background-image: url("../files/buynft.png");
+    background-size: cover;
+    background-position: center;
+}
+footer .card3 .top {
+    background-image: url("../files/minting.png");
+    background-size: cover;
+    background-position: center;
+}
+footer .cards .btm {
+    width: 100%; height: 25%;
+    display: flex; flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+footer .cards .btm p {
+    font-weight: 600;
+    font-size: 1.1em;
+    color: var(--white);
+}
+/* ======================== */
+
+
+
+/* ======================== */
+.form-container {
+    width: 600px;
+    height: 600px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #131313;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 #13131399;
+    display: none;
+    animation: fade 0.3s ease-in-out;
+}
+.form-container form {
+    padding: 2em 3em;
+    display: flex; flex-direction: column;
+    align-items: center;
+    gap: 1.3em;
+}
+.form-container form p {
+    font-size: 1.75em;
+    font-weight: 600;
+    color: var(--white);
+}
+.form-container form .wallets {
+    width: 80%; height: 30vh;
+    display: flex; flex-direction: column;
+    justify-content: space-between;
+}
+.form-container form .wallets a {
+    border-bottom: 1px solid var(--secondary);
+    padding: 1em;
+    display: flex; flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease-in-out
+}
+.form-container form .wallets a i {
+    font-size: 2em;
+    color: var(--accentP);
+}
+.form-container form .wallets a p {
+    font-size: 1em;
+}
+.form-container form .wallets a:hover {
+    background-color: #8D99AE33;
+}
+.form-container form span {
+    font-size: 0.75em;
+    font-weight: 600;
+    color: var(--secondary);
+}
+.form-container input {
+    width: 80%;
+    padding: 1em;
+    background-color: var(--primary);
+    border: 2px solid var(--secondary);
+    color: var(--white);
+    border-radius: 0.5em;
+}
+.form-container input::placeholder {
+    color: var(--secondary);
+    font-weight: 500;
+}
+.form-container input:focus {
+    background-color: #8D99AE66;
+}
+.form-container .close {
+    position: absolute;
+    top: 5px; right: 15px;
+    color: var(--accentP);
+    font-size: 28px;
+    cursor: pointer;
+}
+/* ======================== */
+
+
+
+/* ======================== */
+@media (max-width: 412px) {
+    nav {
+        height: 3.5em;
+    }
+    nav .nav-l img {
+    width: 1.5em;
+    }
+    nav .nav-l p {
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--white);
+    }
+    nav .nav-r a {
+    padding: 0.5em;
+    font-size: 0.8em;
+    border-radius: 50%;
+    }
+    nav .nav-r a p {
+        display: none;
+    }
+    /* ======================== */
+    .intro {
+        height: 22em;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
+    .intro .int-r {
+        width: 100%; height: 10%;
+    }
+    .intro .int-r .r-holder {
+        background-image: none;
+    }
+    .intro .int-r .r-holder h2 {
+        font-size: 0.9em;
+    }
+    .intro .int-l {
+        width: 100%; height: 88%;
+        align-items: center;
+        text-align: center;
+        justify-content: start;
+        gap: 1em;
+    }
+    .intro .int-l h1 {
+        font-size: 2em;
+    }
+    .intro .int-l h1 span img {
+    width: 0.65em;
+    translate: -.2rem 0.3rem;
+    border-radius: 0.1rem;
+    }
+    .intro .int-l .slogan {
+    font-size: 0.65em;
+    }
+    .intro .int-l .points {
+    width: 100%; height: 3em;
+    }
+    .intro .int-l .points .items {
+        gap: 0.2em;
+    }
+    .intro .int-l .points .items i {
+    font-size: 0.85em;
+    border-radius: 0.2em;
+    }
+    .intro .int-l .points .items p {
+    font-size: 0.7em;
+    }
+    .intro .int-l a {
+    padding: 0.5em 1em;
+    font-size: 0.85em;
+    border-radius: 0.35em;
+    }
+    /* ======================== */
+    main .slider {
+        display: none;
+    }
+    main .trend {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    .trend .tr-r {
+        width: 100%;
+    }
+    .trend .tr-r .desc-holder {
+        width: 100%;
+    }
+    .trend .tr-r .desc-holder p:nth-child(1) {
+    font-size: .75rem;
+    }
+    .trend .tr-r .desc-holder p:nth-child(2) {
+    font-size: 1.5rem;
+    }
+    .trend .tr-r .desc-holder p:nth-child(3) {
+    font-size: 0.75rem;
+    bottom: 245px;
+    }
+    .trend .tr-r .desc-holder .info {
+        width: 100%; height: 100%;
+    }
+    .trend .tr-r .desc-holder .info span {
+        font-size: 0.75em;
+    }
+    .trend .tr-l {
+        width: 100%; height: 100%;
+    }
+    .trend .tr-l .card {
+        width: 100%; height: 100%;
+    }
+    .trend .tr-l .card .card-main img {
+        width: 13em;
+    }
+    .trend .tr-l .card .card-footer {
+        width: 100%;
+    }
+    .trend .tr-l .card .card-footer img {
+        width: 4em;
+    }
+    .trend .tr-l .card .card-footer span:nth-child(4) {
+    font-size: 2.5em;
+    bottom: 2.5em;
+    }
+    .trend .tr-l .card .card-footer span:nth-child(5) {
+    font-size: 0.75em;
+    bottom: 3px; left: 18px;
+    }
+    .trend .tr-l .card .card-footer span:nth-child(6) {
+    font-size: 0.75em;
+    bottom: 3px; left: 133px;
+    }
+    .trend .tr-l .card .card-footer span:nth-child(7) {
+    font-size: 0.75em;
+    bottom: 3px; right: 27px;
+    }
+    .trend .tr-r .desc-holder p:nth-child(3) {
+    font-size: 0.65rem;
+    bottom: 15.5rem;
+    }
+    .trend .tr-l .card .card-footer p:nth-child(8) {
+    bottom: 21.5em; left: -1em;
+    font-size: 0.85em;
+    }
+    .trend .tr-l .card .card-footer p:nth-child(9) {
+    bottom: 20em; right: 2em;
+    font-size: 0.5em;
+    }
+    .trend .tr-l .card .card-footer p:nth-child(10) {
+    bottom: 11em; left: 4.5em;
+    font-size: 0.8em;
+    }
+    /* ======================== */
+    footer {
+        width: 100%; height: 60vh;
+        flex-direction: column;
+        gap: 5em;
+        margin-top: 0;
+    }
+    footer .cards {
+        width: 100%; height: 33%;
+    }
+    footer .cards .top {
+    width: 100%; height: 20vh;
+    border-radius: 0.5em;
+    }
+    /* ======================== */
+    .form-container {
+        width: 300px; height: 400px;
+    }
+    .form-container form {
+    padding: 1em 2em;
+    gap: 1em;
+    }
+    .form-container form img {
+        width: 3em;
+    }
+    .form-container form p {
+        font-size: 1em;
+    }
+    .form-container form .wallets {
+        height: 20vh;
+    }
+    .form-container form .wallets a {
+        padding: 0.5em;
+    }
+    .form-container form .wallets a i {
+    font-size: 1.5em;
+    }
+    .form-container form .wallets a p {
+    font-size: 0.75em;
+    }
+    .form-container form span {
+    font-size: 0.5em;
+    }
+    .form-container input {
+    width: 80%;
+    padding: 0.75em;
+    border-radius: 0.5em;
+    font-size: 0.5em;
+    }
+    .form-container .close {
+    top: 10px; right: 15px;
+    font-size: 18px;
+    }
+}
+/* ======================== */
+
+
+
+/* ======================== */
+@keyframes slide {
+    from {
+        left: 100%;
+    }
+    to {
+        left: calc(var(--width) * -1);
+    }
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
